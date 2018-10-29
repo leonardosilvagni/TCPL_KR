@@ -1,4 +1,4 @@
-// Exercise 1-12 from K&R
+// es1-12 from K&R
 // Leonardo Silvagni v2018 
 // Goal: Print One word per line
 #include <stdio.h>

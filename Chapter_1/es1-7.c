@@ -1,4 +1,4 @@
-// Exercise 1-7 from the K&R
+// es 1-7.c from K&R 
 // Leonardo Silvagni 26.10.2018
 // Goal: Write a program to print the value of EOF
 

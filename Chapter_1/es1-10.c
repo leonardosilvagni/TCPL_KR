@@ -1,4 +1,4 @@
-// Exercise 1-10 from K&R
+// es1-10 from K&R
 // Leonardo Silvagni 29.10.2018 
 // Goal: Copy input into output, repalcin tab with \t backspapce with \b and backslash with'\\'
 #include <stdio.h>

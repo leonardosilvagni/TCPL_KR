@@ -1,5 +1,6 @@
-// K&R first chapter exercise 1.5
-
+// es1-5.c from K&R 
+// Leonardo Silvagno 2018
+// Goal : Print the fahr-celsius conversion table
 #include <stdio.h>
 
 int main(){

@@ -1,5 +1,6 @@
-// K&R first chapter exercise 1.3 && 1.4
-
+// es1-4.c  from K&R 
+// Leonardo Silvagni 2018
+// Goal: Print the fahr celsius and reverse table
 #include <stdio.h>
 
 int main(){

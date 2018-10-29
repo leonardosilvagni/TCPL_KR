@@ -1,4 +1,4 @@
-// Exercise 1-8 from K&R
+// es 1-8.c from K&R
 // Leonardo Silvagni 26.10.2018
 // Goal: Write a porgram to count newline, tabs and blank
 #include <stdio.h>

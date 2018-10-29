@@ -1,4 +1,4 @@
-// Exercise 1-9 from K&R
+// es1-9.c from K&R
 // Leonardo Silvagni 26.10.2018 
 // Goal: Copy input to output, repacing lines with each consecutive blank with a single blank 
 #include <stdio.h>
