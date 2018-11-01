@@ -34,11 +34,10 @@ void print_x_istogram(){
 }
 
 void print_y_istogram(){
-	int c,char_count=0,word_count=0,state=0,it=0;
+	int c,max_char_count=0,word_count=0,state=0,it=0,char_count=0;
 	int buf[1000];
 	while((c=getchar())!=EOF && it!=998){
 		it++;
-		char_count++;
 		buf[it]=c;	
 	};
 	buf[it+1]=EOF;
@@ -47,7 +46,10 @@ void print_y_istogram(){
 		if(buf[it]==' '||buf[it]=='\t'||buf[it]=='\n')state=0;
 		else if (state==0){
 			state=1;
-			word_count++;};
+			if(char_count>max_char_count)max_char_count=char_count;
+			char_count=0;
+			word_count++;
+		}else if(state==1)char_count++;
 	it++;
 	};
 	it=0;
@@ -59,7 +61,15 @@ void print_y_istogram(){
 			char_per_word[it]++;};
 	it++;
 	};
-
+	for(int i=0;i!=max_char_count;i++){
+		for(int j=0;j!=word_count;j++){
+			if(char_per_word[j]!=0){
+				putchar('*');
+				char_per_word[j]--;
+			}else if(char_per_word[j]==0)putchar(' ');
+		};
+		putchar('\n');
+	};
 }
 
 
