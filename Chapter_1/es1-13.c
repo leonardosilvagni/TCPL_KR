@@ -1,7 +1,7 @@
 // es1-13.c from K&R
 // Leonardo Silvagni 2018
 // Goal: Print an Istogram of the lenght of words in its input
-
+// Error on char_per_word and word count, should format the input.
 #include <stdio.h>
 
 void print_x_istogram();
@@ -35,8 +35,8 @@ void print_x_istogram(){
 
 void print_y_istogram(){
 	int c,max_char_count=0,word_count=0,state=0,it=0,char_count=0;
-	int buf[1000];
-	while((c=getchar())!=EOF && it!=998){
+	int buf[50];
+	while((c=getchar())!=EOF && it!=48){
 		it++;
 		buf[it]=c;	
 	};
@@ -46,21 +46,24 @@ void print_y_istogram(){
 		if(buf[it]==' '||buf[it]=='\t'||buf[it]=='\n')state=0;
 		else if (state==0){
 			state=1;
-			if(char_count>max_char_count)max_char_count=char_count;
 			char_count=0;
 			word_count++;
-		}else if(state==1)char_count++;
+		}else if(state==1){char_count++;
+			if(char_count>max_char_count)max_char_count=char_count;
+		};
 	it++;
 	};
 	it=0;
 	int char_per_word[word_count];
+	for(int i=0; i<word_count;i++)char_per_word[i]=0;
 	while(buf[it]!=EOF){
 		if(buf[it]==' '||buf[it]=='\t'||buf[it]=='\n')state=0;
 		else if (state==0){
 			state=1;
 			char_per_word[it]++;};
 	it++;
-	};
+	};//The error is here according to GDB
+	putchar('\n');
 	for(int i=0;i!=max_char_count;i++){
 		for(int j=0;j!=word_count;j++){
 			if(char_per_word[j]!=0){
