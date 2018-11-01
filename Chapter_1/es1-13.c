@@ -36,29 +36,6 @@ void print_x_istogram(){
 }
 
 void print_y_istogram(){
-	int buf[1000];
-	int state=0,wc=0,c;
-	while((c=getchar())!=EOF){
-		for(int it=0;it!=1000;it++){
-			if((buf[it]=c)=='\n') it=1000;
-			if (buf[it]==' '||buf[it]=='\t') state=0;
-			else if (state==0){
-				state=1;
-				wc++;
-			};
-		};
-		int word_buf[wc];
-		for(
-	};	
+		
 }
 
-/*int word_count(){
-	int state=0,wc,c;
-	while((c=getchar())!=EOF){
-		if(c='\n') return wc;
-		if(c=' '||c='\t') state=0;
-		else if (state==0){
-		state=1;
-		wc++;}
-	}return wc;
-}*/
