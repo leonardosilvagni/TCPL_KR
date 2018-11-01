@@ -4,13 +4,13 @@ echo "If the program does not behave correctly, you might have accidentally chan
 The file are structured with the following pattern: Line 1 // esx-x from K&R
 Line 2: // Author YEAR
 Line 3: // Goal: ..."
-Directory=/home/leonardo/TCPL_KR/
+Directory=/home/leonardo/Work/TCPL_KR/
 if [ -z "$1" ]
 then
-    cd Directory
+    cd $Directory
 else
-    cd Directory
-    cd $1
+    cd $Directory
+    cd Chapter_[$1]
 fi
 echo "$PWD"
 for i in *.c; do
