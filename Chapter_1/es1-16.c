@@ -15,7 +15,8 @@ int main(){
 			max = len;
 			copy(longest,line);
 		};
-	if (max>0) printf("%s",longest);
+	if (max>0) printf("%s\nLongest line lenght: %d\n",longest,max);
+
 	return 0;
 }
 
