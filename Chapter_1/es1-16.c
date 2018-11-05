@@ -4,13 +4,13 @@
 
 #include <stdio.h>
 
-int getline(char [],int );
-void copy(char [], char []);
+int usr_getline(char line[],int maxline);
+void copy(char to[], char from[]);
 const int MAXLINE = 1000;
 int main(){
 	int len,max=0;
 	char line[MAXLINE],longest[MAXLINE];
-	while((len =getline(line, MAXLINE)) > 0)
+	while((len = usr_getline(line, MAXLINE)) > 0)
 		if(len > max){
 			max = len;
 			copy(longest,line);
@@ -19,7 +19,7 @@ int main(){
 	return 0;
 }
 
-int getline(char line[], int maxline){
+int usr_getline(char line[], int maxline){
 	int c,i;
 	for(i=0;i<maxline-1&&(c=getchar())!=EOF&&c!='\n';++i)
 		line[i]=c;
