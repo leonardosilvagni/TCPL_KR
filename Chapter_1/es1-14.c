@@ -1,12 +1,12 @@
-//	es1-14.c from K&R
-//	Leonardo Silvagni 2018
-//	Goal: print an istogram of the frequencies of different characters
+// es1-14.c from K&R
+// Leonardo Silvagni 2018
+// Goal: print an istogram of the frequencies of different characters
 
 #include <stdio.h>
 
 int main(){
 	int c;
-	int char_range[37]={0};// In range 0-9 there are the numbers, from 9 to 35 there arethe letters and in 36
+	int char_range[37]={1};// In range 0-9 there are the numbers, from 9 to 35 there arethe letters and in 36
 	//	are other chars such as è,é,{}[]()/&%$£"!|\^?=ì'@-+ and so on
 	//	There is no distinction between lowercase and uppercase
 	while((c=getchar())!=EOF){
@@ -151,78 +151,80 @@ int main(){
 		};
 
 		printf("\na:");
-		for(int i=0;i!=char_range[10];i++&&putchar('*'));
+		for(int i=0;i!=char_range[10];putchar('*')&&i++);
 		printf("\nb:");
-		for(int i=0;i!=char_range[11];i++&&putchar('*'));
+		for(int i=0;i!=char_range[11];putchar('*')&&i++);
 		printf("\nc:");
-		for(int i=0;i!=char_range[12];i++&&putchar('*'));
+		for(int i=0;i!=char_range[12];putchar('*')&&i++);
 		printf("\nd:");
-		for(int i=0;i!=char_range[13];i++&&putchar('*'));
+		for(int i=0;i!=char_range[13];putchar('*')&&i++);
 		printf("\ne:");
-		for(int i=0;i!=char_range[14];i++&&putchar('*'));
+		for(int i=0;i!=char_range[14];putchar('*')&&i++);
 		printf("\nf:");
-		for(int i=0;i!=char_range[15];i++&&putchar('*'));
+		for(int i=0;i!=char_range[15];putchar('*')&&i++);
 		printf("\ng:");
-		for(int i=0;i!=char_range[16];i++&&putchar('*'));
+		for(int i=0;i!=char_range[16];putchar('*')&&i++);
 		printf("\nh:");
-		for(int i=0;i!=char_range[17];i++&&putchar('*'));
+		for(int i=0;i!=char_range[17];putchar('*')&&i++);
 		printf("\ni:");
-		for(int i=0;i!=char_range[18];i++&&putchar('*'));
+		for(int i=0;i!=char_range[18];putchar('*')&&i++);
 		printf("\nj:");
-		for(int i=0;i!=char_range[19];i++&&putchar('*'));
+		for(int i=0;i!=char_range[19];putchar('*')&&i++);
 		printf("\nk:");
-		for(int i=0;i!=char_range[20];i++&&putchar('*'));
+		for(int i=0;i!=char_range[20];putchar('*')&&i++);
 		printf("\nl:");
-		for(int i=0;i!=char_range[21];i++&&putchar('*'));
+		for(int i=0;i!=char_range[21];putchar('*')&&i++);
 		printf("\nm:");
-		for(int i=0;i!=char_range[22];i++&&putchar('*'));
+		for(int i=0;i!=char_range[22];putchar('*')&&i++);
 		printf("\nn:");
-		for(int i=0;i!=char_range[23];i++&&putchar('*'));
+		for(int i=0;i!=char_range[23];putchar('*')&&i++);
 		printf("\no:");
-		for(int i=0;i!=char_range[24];i++&&putchar('*'));
+		for(int i=0;i!=char_range[24];putchar('*')&&i++);
 		printf("\np:");
-		for(int i=0;i!=char_range[25];i++&&putchar('*'));
+		for(int i=0;i!=char_range[25];putchar('*')&&i++);
 		printf("\nq:");
-		for(int i=0;i!=char_range[26];i++&&putchar('*'));
+		for(int i=0;i!=char_range[26];putchar('*')&&i++);
 		printf("\nr:");
-		for(int i=0;i!=char_range[27];i++&&putchar('*'));
+		for(int i=0;i!=char_range[27];putchar('*')&&i++);
 		printf("\ns:");
-		for(int i=0;i!=char_range[28];i++&&putchar('*'));
+		for(int i=0;i!=char_range[28];putchar('*')&&i++);
 		printf("\nt:");
-		for(int i=0;i!=char_range[29];i++&&putchar('*'));
+		for(int i=0;i!=char_range[29];putchar('*')&&i++);
 		printf("\nu:");
-		for(int i=0;i!=char_range[30];i++&&putchar('*'));
+		for(int i=0;i!=char_range[30];putchar('*')&&i++);
+		printf("\nv:");
+		for(int i=0;i!=char_range[31];putchar('*')&&i++);
 		printf("\nw:");
-		for(int i=0;i!=char_range[31];i++&&putchar('*'));
+		for(int i=0;i!=char_range[32];putchar('*')&&i++);
 		printf("\nx:");
-		for(int i=0;i!=char_range[32];i++&&putchar('*'));
+		for(int i=0;i!=char_range[33];putchar('*')&&i++);
 		printf("\ny:");
-		for(int i=0;i!=char_range[33];i++&&putchar('*'));
+		for(int i=0;i!=char_range[34];putchar('*')&&i++);
 		printf("\nz:");
-		for(int i=0;i!=char_range[34];i++&&putchar('*'));
+		for(int i=0;i!=char_range[35];putchar('*')&&i++);
 		printf("\n0:");
-		for(int i=0;i!=char_range[0];i++&&putchar('*'));
+		for(int i=0;i!=char_range[0];putchar('*')&&i++);
 		printf("\n1:");
-		for(int i=0;i!=char_range[1];i++&&putchar('*'));
+		for(int i=0;i!=char_range[1];putchar('*')&&i++);
 		printf("\n2:");
-		for(int i=0;i!=char_range[2];i++&&putchar('*'));
+		for(int i=0;i!=char_range[2];putchar('*')&&i++);
 		printf("\n3:");
-		for(int i=0;i!=char_range[3];i++&&putchar('*'));
+		for(int i=0;i!=char_range[3];putchar('*')&&i++);
 		printf("\n4:");
-		for(int i=0;i!=char_range[4];i++&&putchar('*'));
+		for(int i=0;i!=char_range[4];putchar('*')&&i++);
 		printf("\n5:");
-		for(int i=0;i!=char_range[5];i++&&putchar('*'));
+		for(int i=0;i!=char_range[5];putchar('*')&&i++);
 		printf("\n6:");
-		for(int i=0;i!=char_range[6];i++&&putchar('*'));
+		for(int i=0;i!=char_range[6];putchar('*')&&i++);
 		printf("\n7:");
-		for(int i=0;i!=char_range[7];i++&&putchar('*'));
+		for(int i=0;i!=char_range[7];putchar('*')&&i++);
 		printf("\n8:");
-		for(int i=0;i!=char_range[8];i++&&putchar('*'));
+		for(int i=0;i!=char_range[8];putchar('*')&&i++);
 		printf("\n9:");
-		for(int i=0;i!=char_range[9];i++&&putchar('*'));
+		for(int i=0;i!=char_range[9];putchar('*')&&i++);
 		printf("\n :");
-		for(int i=0;i!=char_range[36];i++&&putchar('*'));
-		printf("\nThe line above are for others\n");
+		for(int i=0;i!=char_range[36];putchar('*')&&i++);
+		printf("\nThe line above is for others\n");
 	};
 
 }

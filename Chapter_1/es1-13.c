@@ -7,7 +7,7 @@ void print_x_istogram();
 void print_y_istogram();
 int main(){
 	int question;
-	printf("h to print horizontal istogram OR v to print vertical istogram(does not work)\n");
+	printf("h to print horizontal istogram OR v to print vertical istogram\n");
 	switch(question=getchar()){
 		case 'h':
 		case 'H':
@@ -35,13 +35,13 @@ void print_x_istogram(){
 void print_y_istogram(){
 	int c,max_char_count=0,word_count=0,state=0,it=0,char_count=0;
 	int buf[50]={0};
-	while((c=getchar())!='\n' && it!=48){
+	while((c=getchar())!=EOF && it!=48){
 		it++;
 		buf[it]=c;	
 	};
 	buf[49]=EOF;
 	it=0;
-	while(buf[it]!=EOF||buf[it]!='\n'){
+	while(buf[it]!=EOF/*||buf[it]!='\n'*/){
 		if(buf[it]==' '||buf[it]=='\t'||buf[it]=='\n')state=0;
 		else if (state==0){
 			state=1;
@@ -54,15 +54,17 @@ void print_y_istogram(){
 	};
 	it=0;
 	int char_per_word[word_count];
+	int word_number=0;
 	for(int i=0; i<word_count;i++)char_per_word[i]=0;
 	state=0;
 	while(buf[it]!=EOF){
 		if(buf[it]==' '||buf[it]=='\t'||buf[it]=='\n')state=0;
 		else if (state==0){
 			state=1;
-			char_per_word[it]+=1
-		;};
-	it++;
+			char_per_word[word_number]+=1;
+			word_number++;
+		;}else/* if (state==1)*/{char_per_word[word_number]+=1;};
+	it++;//Basically, I have to put a iterator for the word count
 	};//The error is here according to GDB
 	putchar('\n');
 	for(int i=0;i!=max_char_count;i++){
