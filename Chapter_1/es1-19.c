@@ -10,7 +10,7 @@ int main(){
 	int lenght;
 	while((lenght=usr_getline(line,MAXLINE))>0){
 		usr_reverse(line,lenght);
-		printf("%s\n",line);
+		printf("%s",line);
 	}
 	return 0;
 }
