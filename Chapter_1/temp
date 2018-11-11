@@ -1,59 +1,59 @@
 
 
-R&K morf c.81-1se //
 
-8102 ingavliS odranoeL //
+// es1-18.c from K&R
 
- sknalB gniliarT evomeR :laoG //
+// Leonardo Silvagni 2018
+
+// Goal: Remove Trailing Blanks 
 
 
 s
->h.oidts< edulcni#
+#include <stdio.h>
 
-;)][enil rahc(sknalb_gniliart_evomer_rsu diov
+void usr_remove_trailing_blanks(char line[]);
 
-;)enilxam tni,][enil rahc(enilteg_rsu tni
+int usr_getline(char line[],int maxline);
 
-0001 ENILXAM enifed#
+#define MAXLINE 1000
 
-{)(niam tni
+int main(){
 
-;nel tni	
-;}'0\'{=]ENILXAM[enil rahc	
-)0 > ))ENILXAM ,enil(enilteg_rsu = nel((elihw	
-;)enil,"n\s%"(ftnirp )0>nel( fi	
-;0 nruter	
-}
-
-tuohtiw ,noitcnuf enilteg eht ot evom retteb os ,gnihton tiw siht ecalper ot si aedi EHT //	
-snoitcnuf eht gnisuba //	
-{)enilxam tni ,][enil rahc(enilteg_rsu tni
-
-;i,c tni	
-:TNIOP
-
-{)i++;'n\'=!c&&FOE=!))(rahcteg=c(&&1-enilxam<i;0=i(rof	
-{)c(hctiws	
-:' ' esac	
-:'t\' esac	
-;TNIOP otog	
-;kaerb	
-:tluafed	
-;c=]i[enil	
-;kaerb	
-;}	
-}	
-{)'n\'==c&&0==i(fi	
-;1 nruter	
-;}	
-{)'n\'==c(fi	
-;c=]i[enil	
-;};i++	
-;'0\'=]i[enil	
-;i nruter	
+	int len;
+	char line[MAXLINE]={'\0'};
+	while((len = usr_getline(line, MAXLINE)) > 0)
+	if (len>0) printf("%s\n",line);
+	return 0;
 }
 
+	// THE idea is to replace this wit nothing, so better move to the getline function, without
+	// abusing the functions
+int usr_getline(char line[], int maxline){
+
+	int c,i;
+POINT:
+
+	for(i=0;i<maxline-1&&(c=getchar())!=EOF&&c!='\n';++i){
+	switch(c){
+	case ' ':
+	case '\t':
+	goto POINT;
+	break;
+	default:
+	line[i]=c;
+	break;
+	};
+	}
+	if(i==0&&c=='\n'){
+	return 1;
+	};
+	if(c=='\n'){
+	line[i]=c;
+	++i;};
+	line[i]='\0';
+	return i;
 }
+
 }
 }
 }
@@ -145064,4 +145064,4 @@ snoitcnuf eht gnisuba //
 }
 }
 }
-}
+}}
