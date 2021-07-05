@@ -5,7 +5,7 @@
 
 int main(){
 	float fahr, celsius;
-	const float lower= 0 , upper = 320, step = 20;
+	const float lower= 0 , upper = 340, step = 20;
 	fahr = lower;
 	printf("Fahrenheit\tCelsius\n");
 	while(fahr<=upper){
